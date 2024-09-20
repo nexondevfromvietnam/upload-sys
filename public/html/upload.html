@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload File</title>
+    <link rel="stylesheet" href="../css/a.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload Your File</h1>
+        <form action="/upload" method="POST" enctype="multipart/form-data" class="upload-form">
+            <label for="file-upload" class="custom-file-upload">
+                Select a file
+            </label>
+            <input id="file-upload" type="file" name="file" required onchange="displayFileName()">
+            <p id="file-name" class="file-name-display"></p>
+            <button type="submit" class="btn-upload">Upload</button>
+        </form>
+        <a href="/files" class="link-view-files">View Uploaded Files</a>
+    </div>
+
+    <script>
+        function displayFileName() {
+            const fileInput = document.getElementById('file-upload');
+            const fileName = fileInput.files[0].name;
+            document.getElementById('file-name').textContent = fileName;
+        }
+    </script>
+</body>
+</html>

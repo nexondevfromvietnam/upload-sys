@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1 id="error-message" class="error-message" style="display: none"></h1>
+    <p id="error-message" class="error-message" style="display: none;">Back to <a href="/">Order</a> | <a href="/login">Login</a></p>
+  </body>
+  <script>
+    const errorMessage = document.getElementById("error-message");
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get("e");
+    if (error) {
+      errorMessage.innerText = error;
+      errorMessage.style.display = "block";
+    }
+  </script>
+  <style>
+    .error-message {
+      font-family: "Open Sans", sans-serif;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 50px;
+      color: rgb(170, 170, 170);
+    }
+  </style>
+</html>

@@ -1,0 +1,119 @@
+/* General styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    margin-top: 50px;
+}
+
+form.upload-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Custom file upload button */
+.custom-file-upload {
+    display: inline-block;
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-file-upload:hover {
+    background-color: #357ABD;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+/* Upload button */
+.btn-upload {
+    background-color: #28a745;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-upload:hover {
+    background-color: #218838;
+}
+
+/* View Files Link */
+.link-view-files, .link-back-upload {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #4a90e2;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.link-view-files:hover, .link-back-upload:hover {
+    color: #357ABD;
+}
+
+/* File list styles */
+ul.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+li.file-item {
+    background-color: #f1f1f1;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+li.file-item a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+li.file-item a:hover {
+    color: #4a90e2;
+}
+/* Style for displaying the selected file name */
+.file-name-display {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    font-style: italic;
+}
